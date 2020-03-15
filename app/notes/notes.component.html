@@ -1,15 +1,14 @@
 <div class="notes">
   <form (ngSubmit)="onsubmit(notesform)" #notesform="ngForm">
-    <div class="control">
-      <label [ngModel]="note.date">{{ createddate | date }}</label>
-    </div>
-    <label for="title" >Title</label>
+    <input name="date" [ngModel]="note.date" [value]="createddate | date:'medium'"  readonly style="margin-top: 25px;">
+    <br>
+    <label for="title" style="font-size: larger; margin-top: 30px;" >Title</label>
     <br>
     <div class="control">
     <input type="text" name="title" [ngModel]="note.title">
     </div>
     <br>
-    <label for="body">Body</label>
+    <label for="body" style="font-size: larger;">Body</label>
     <br>
     <div class="control">
     <input type="text" name="body" class="body" [ngModel]="note.body">

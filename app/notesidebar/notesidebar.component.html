@@ -1,7 +1,10 @@
 <app-topbar> </app-topbar>
-<div class="card" *ngFor='let n of notes'>
+
+  <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term" style="left: 300px;">
+<div class="card" *ngFor="let n of notes | filter:term">
   <div class="card-body">
     <h5 class="card-title">{{n.title}}</h5>
+    <p class="card-text">{{n.date}}</p>
     <p class="card-text">{{n.body}}</p>
     <button type="button" class="btn btn-info" (click)="deletenote();">Delete</button>
   </div>

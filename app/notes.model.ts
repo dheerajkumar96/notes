@@ -2,5 +2,5 @@
 export class notes {
 public title: string;
 public body: string;
-public date: Date;
+public date: string;
 }

@@ -4,3 +4,11 @@
   left: 500px;
   top: 65px;
 }
+
+.form-control{
+  margin-left: 500px;
+  margin-right: 500px;
+  width: 500px;
+  margin-top: 30px;
+  text-align: center;
+}
