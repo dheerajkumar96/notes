@@ -1,6 +1,8 @@
-<p>notesidebar works!</p>
+<app-topbar> </app-topbar>
 <div class="card" *ngFor='let n of notes'>
   <div class="card-body">
-    {{n.toString()}}
+    <h5 class="card-title">{{n.title}}</h5>
+    <p class="card-text">{{n.body}}</p>
+    <button type="button" class="btn btn-info" (click)="deletenote();">Delete</button>
   </div>
 </div>

@@ -1,6 +1,8 @@
-<p>notes works!</p>
 <div class="notes">
   <form (ngSubmit)="onsubmit(notesform)" #notesform="ngForm">
+    <div class="control">
+      <label [ngModel]="note.date">{{ createddate | date }}</label>
+    </div>
     <label for="title" >Title</label>
     <br>
     <div class="control">
@@ -10,7 +12,7 @@
     <label for="body">Body</label>
     <br>
     <div class="control">
-    <input type="text" name="body" [ngModel]="note.body">
+    <input type="text" name="body" class="body" [ngModel]="note.body">
     </div>
     <br>
     <button type="button" class="btn btn-primary" (click)="onsubmit(notesform)">Save</button>
